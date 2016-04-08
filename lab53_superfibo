@@ -1,0 +1,17 @@
+def super_fibonacci(n, m):
+    list = []
+    while m != 0:
+        list.append(1)
+        m = m - 1
+        
+    list2 = len(list) - 1
+    while len(list) < n:
+        list.append(sum(list[-1 - list2:]))
+    print(list[-1])
+
+
+
+#super_fibonacci(2, 1)
+#super_fibonacci(3, 5)
+super_fibonacci(8, 2)
+#super_fibonacci(9, 3)
