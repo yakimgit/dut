@@ -1,0 +1,19 @@
+def count_holes(n):
+    if isinstance(n, float):
+        print ('ERROR')
+    else:
+        glob_dic = {'0': 1, '4': 1, '6': 1, '8': 2, '9': 1};
+        s = '';
+        con = 0
+        n = int(n);
+        n = str(n)
+        for i in n:
+            if i in glob_dic:
+                con = con + glob_dic.get(i)
+        print (con)
+
+
+#count_holes('123')
+#count_holes('906')
+count_holes(-8.0)
+#count_holes('906')
