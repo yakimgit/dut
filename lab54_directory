@@ -1,1 +1,21 @@
+def file_search(folder, filename):
 
+        s = folder[0] + "/"
+
+        if filename in folder:
+            print (s + filename)
+
+        for i in folder:
+            if isinstance(i, list) == True:
+                if len(i) > 1:
+                    recursion = file_search(i, filename)
+                    if s != None:
+                        s = s + recursion
+                    print (s)
+        print (False)
+
+
+
+
+file_search(['C:', 'backup.log', 'ideas.txt'], 'ideas.txt')
+#file_search(['C:'], 'crack.exe')
